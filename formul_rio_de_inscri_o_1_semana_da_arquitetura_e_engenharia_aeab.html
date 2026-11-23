@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscrição Oficial — 1ª Semana da Arquitetura e Engenharia da AEAB</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            aeab: {
+              navy: '#0C2A47',
+              navyLight: '#153E66',
+              green: '#5F8518',
+              lime: '#7CB52E',
+              bg: '#F4F5F0',
+              card: '#FFFFFF',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #F4F5F0;
+      color: #1E293B;
+    }
+
+    /* Transições suaves e estilo Google Forms institucional */
+    .form-card {
+      background: #FFFFFF;
+      border-radius: 14px;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 2px 10px rgba(12, 42, 71, 0.04);
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .form-card:focus-within {
+      border-color: #7CB52E;
+      box-shadow: 0 4px 16px rgba(12, 42, 71, 0.08);
+    }
+
+    .input-field {
+      width: 100%;
+      border: 1px solid #CBD5E1;
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      color: #0F172A;
+      background-color: #FAFAFA;
+      transition: all 0.2s ease;
+    }
+
+    .input-field:focus {
+      outline: none;
+      background-color: #FFFFFF;
+      border-color: #0C2A47;
+      box-shadow: 0 0 0 3px rgba(124, 181, 46, 0.25);
+    }
+
+    .input-error {
+      border-color: #DC2626 !important;
+      background-color: #FEF2F2 !important;
+    }
+
+    /* Custom Checkbox & Radio cards */
+    .option-card {
+      border: 1.5px solid #E2E8F0;
+      border-radius: 12px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .option-card:hover {
+      border-color: #94A3B8;
+      background-color: #F8FAFC;
+    }
+
+    .option-card.selected {
+      border-color: #5F8518;
+      background-color: rgba(124, 181, 46, 0.08);
+    }
+
+    /* Banner com Casa de Barro em segundo plano e malha arquitetônica */
+    .hero-banner-bg {
+      background:
+        linear-gradient(135deg, rgba(12, 42, 71, 0.72) 0%, rgba(12, 42, 71, 0.35) 55%, rgba(95, 133, 24, 0.45) 100%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 28px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 28px);
+    }
+
+    .glass-panel {
+      background: rgba(12, 42, 71, 0.84);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(124, 181, 46, 0.65);
+      box-shadow: 0 12px 32px rgba(6, 20, 36, 0.45);
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .form-card {
+        box-shadow: none !important;
+        border: 1px solid #CBD5E1 !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen py-6 px-3 sm:px-6 lg:px-8 antialiased selection:bg-aeab-lime selection:text-white">
+
+  <!-- Barra de Notificação (Toast) -->
+  <div id="toast-container" class="fixed top-4 right-4 z-50 max-w-sm w-full pointer-events-none flex flex-col gap-2"></div>
+
+  <!-- Container Principal Estilo Google Forms / Landing Page -->
+  <main class="max-w-3xl mx-auto space-y-5">
+
+    <!-- 1. BANNER DE CABEÇALHO -->
+    <header class="form-card overflow-hidden border-t-8 border-t-aeab-navy">
+      <!-- Banner Institucional com Casa de Barro em segundo plano e Retângulo Translúcido -->
+      <div class="relative w-full min-h-[240px] sm:min-h-[270px] bg-aeab-navy overflow-hidden flex items-center">
+        <!-- Ilustração Arquitetônica fiel da Casa de Barro & Complexo dos Padres Claretianos ao fundo -->
+        <svg viewBox="0 0 1200 340" preserveAspectRatio="xMidYMid slice" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true">
+          <defs>
+            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#8FAEC9" />
+              <stop offset="65%" stop-color="#D7E2EA" />
+              <stop offset="100%" stop-color="#C2D1DC" />
+            </linearGradient>
+            <linearGradient id="brickWall" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#B84B28" />
+              <stop offset="50%" stop-color="#C95632" />
+              <stop offset="100%" stop-color="#9E3C1D" />
+            </linearGradient>
+            <linearGradient id="vaultGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#FFFFFF" />
+              <stop offset="70%" stop-color="#F1F5F9" />
+              <stop offset="100%" stop-color="#CBD5E1" />
+            </linearGradient>
+            <linearGradient id="lawnGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3E7B27" />
+              <stop offset="100%" stop-color="#275417" />
+            </linearGradient>
+          </defs>
+
+          <!-- Céu e Vegetação de Fundo -->
+          <rect width="1200" height="340" fill="url(#skyGrad)" />
+          <!-- Pinheiros / Araucárias características do complexo -->
+          <g fill="#23471E" opacity="0.92">
+            <polygon points="480,25 462,130 498,130" />
+            <polygon points="480,55 455,175 505,175" />
+            <polygon points="940,18 920,135 960,135" />
+            <polygon points="940,50 912,185 968,185" />
+            <polygon points="1035,30 1018,140 1052,140" />
+            <polygon points="1035,65 1012,190 1058,190" />
+            <circle cx="380" cy="145" r="55" fill="#2D5A27" />
+            <circle cx="430" cy="155" r="48" fill="#376E30" />
+            <circle cx="1110" cy="155" r="65" fill="#285022" />
+          </g>
+
+          <!-- Ala de Tijolos Aparentes com Arcos Brancos -->
+          <rect x="0" y="158" width="660" height="115" fill="url(#brickWall)" />
+          <!-- Textura sutil de tijolos -->
+          <g stroke="#7C2D12" stroke-width="1" opacity="0.35">
+            <line x1="0" y1="175" x2="660" y2="175" />
+            <line x1="0" y1="192" x2="660" y2="192" />
+            <line x1="0" y1="209" x2="660" y2="209" />
+            <line x1="0" y1="226" x2="660" y2="226" />
+            <line x1="0" y1="243" x2="660" y2="243" />
+          </g>
+
+          <!-- Arcos Superiores da Ala -->
+          <g>
+            <path d="M 40,158 A 55,34 0 0,1 150,158 Z" fill="#F8FAFC" />
+            <path d="M 52,158 A 43,24 0 0,1 138,158 Z" fill="#1E40AF" />
+            <path d="M 165,158 A 55,34 0 0,1 275,158 Z" fill="#F8FAFC" />
+            <path d="M 177,158 A 43,24 0 0,1 263,158 Z" fill="#1E40AF" />
+            <path d="M 290,158 A 55,34 0 0,1 400,158 Z" fill="#F8FAFC" />
+            <path d="M 302,158 A 43,24 0 0,1 388,158 Z" fill="#1E40AF" />
+            <path d="M 415,158 A 55,34 0 0,1 525,158 Z" fill="#F8FAFC" />
+            <path d="M 427,158 A 43,24 0 0,1 513,158 Z" fill="#1E40AF" />
+          </g>
+
+          <!-- Gramado e Caminho em Terra/Pedra -->
+          <rect x="0" y="265" width="1200" height="75" fill="url(#lawnGrad)" />
+          <polygon points="360,265 440,265 260,340 150,340" fill="#C48B62" opacity="0.9" />
+          <!-- Espelho d'água -->
+          <ellipse cx="645" cy="272" rx="68" ry="18" fill="#2A3B2C" stroke="#8C583A" stroke-width="4" />
+
+          <!-- Abóbada Parabólica Branca Icônica (Casa de Barro) -->
+          <path d="M 655,270 C 710,190 745,105 815,98 L 975,92 C 920,105 885,195 855,274 Z" fill="url(#vaultGrad)" />
+          <!-- Lateral em Tijolo e Madeira da Abóbada -->
+          <path d="M 975,92 C 1005,135 1015,210 1012,272 L 855,274 C 885,195 920,105 975,92 Z" fill="#7C2D12" />
+          <rect x="1008" y="182" width="192" height="90" fill="url(#brickWall)" />
+          <path d="M 1020,182 A 65,28 0 0,1 1150,182 Z" fill="#F8FAFC" />
+        </svg>
+
+        <!-- Camada de Contraste + Grade Técnica -->
+        <div class="hero-banner-bg absolute inset-0"></div>
+
+        <!-- Retângulo Translúcido com Escritas em Destaque + Logo Oficial AEAB -->
+        <div class="relative z-10 w-full px-5 sm:px-8 py-6">
+          <div class="glass-panel rounded-2xl p-5 sm:p-6 max-w-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+            <div class="space-y-1.5">
+              <div class="inline-flex items-center gap-2 bg-aeab-lime/20 border border-aeab-lime/50 text-aeab-lime text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">
+                <span>AEAB Batatais • Evento Oficial</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-none">
+                1ª SEMANA DA <span class="text-aeab-lime">ARQUITETURA</span> E <span class="text-aeab-lime">ENGENHARIA</span>
+              </h2>
+              <p class="text-xs sm:text-sm font-semibold text-slate-200 pt-1">
+                08, 09 e 12 de Dezembro de 2026 <span class="text-aeab-lime mx-1.5">•</span> Palestras e Visita Técnica à Casa de Barro
+              </p>
+            </div>
+
+            <!-- Símbolo Geométrico Oficial da AEAB (Azul, Amarelo, Verde e Vermelho) -->
+            <div class="bg-white/95 p-2.5 rounded-xl shadow-md border border-white/40 shrink-0 self-start sm:self-center">
+              <svg viewBox="0 0 220 155" class="w-24 sm:w-28 h-auto block" role="img" aria-label="Logotipo Oficial AEAB">
+                <!-- Ondas Verdes à esquerda -->
+                <g fill="none" stroke="#008C45" stroke-width="6.5" stroke-linecap="round">
+                  <path d="M 10,48 Q 32,62 55,48 T 100,48" />
+                  <path d="M 10,74 Q 32,88 55,74 T 100,74" />
+                  <path d="M 10,100 Q 32,114 55,100 T 100,100" />
+                  <path d="M 10,126 Q 32,140 55,126 T 100,126" />
+                </g>
+
+                <!-- Grade Quadriculada Cinza/Branca à direita -->
+                <g stroke="#1E293B" stroke-width="1.5">
+                  <rect x="115" y="45" width="22" height="22" fill="#FFFFFF" />
+                  <rect x="137" y="45" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="159" y="45" width="22" height="22" fill="#FFFFFF" />
+                  <rect x="181" y="45" width="22" height="22" fill="#E2E8F0" />
+
+                  <rect x="115" y="67" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="137" y="67" width="22" height="22" fill="#FFFFFF" />
+                  <rect x="159" y="67" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="181" y="67" width="22" height="22" fill="#FFFFFF" />
+
+                  <rect x="115" y="89" width="22" height="22" fill="#FFFFFF" />
+                  <rect x="137" y="89" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="159" y="89" width="22" height="22" fill="#FFFFFF" />
+                  <rect x="181" y="89" width="22" height="22" fill="#E2E8F0" />
+
+                  <rect x="115" y="111" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="137" y="111" width="22" height="22" fill="#FFFFFF" />
+                  <rect x="159" y="111" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="181" y="111" width="22" height="22" fill="#FFFFFF" />
+                </g>
+
+                <!-- Letra E Azul Marinho/Roxo Escuro -->
+                <path d="M 28,38 L 96,38 L 96,56 L 52,56 L 52,74 L 86,74 L 86,91 L 52,91 L 52,110 L 98,110 L 98,128 L 28,128 Z" fill="#1E1671" />
+
+                <!-- Esquadro / Triângulo Amarelo -->
+                <path d="M 94,12 L 172,112 L 160,112 L 136,80 L 66,80 L 22,116 L 18,104 Z M 94,35 L 76,65 L 124,65 Z" fill="#FFF200" stroke="#1E293B" stroke-width="1.2" />
+
+                <!-- Letra A Vermelha -->
+                <path d="M 150,46 L 166,46 L 198,132 L 176,132 L 170,113 L 144,113 L 137,132 L 116,132 Z M 157,68 L 148,97 L 166,97 Z" fill="#D9251D" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conteúdo Informativo do Cabeçalho -->
+      <div class="p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-200">
+          <div class="flex items-center gap-3.5">
+            <div class="bg-white p-2 rounded-xl border border-slate-200 shadow-sm shrink-0">
+              <!-- Logo AEAB repetida no bloco institucional -->
+              <svg viewBox="0 0 220 155" class="w-12 h-12 sm:w-14 sm:h-14 object-contain" role="img" aria-label="Símbolo Institucional AEAB">
+                <g fill="none" stroke="#008C45" stroke-width="6.5" stroke-linecap="round">
+                  <path d="M 10,48 Q 32,62 55,48 T 100,48" />
+                  <path d="M 10,74 Q 32,88 55,74 T 100,74" />
+                  <path d="M 10,100 Q 32,114 55,100 T 100,100" />
+                  <path d="M 10,126 Q 32,140 55,126 T 100,126" />
+                </g>
+                <g stroke="#1E293B" stroke-width="1.5">
+                  <rect x="115" y="45" width="22" height="22" fill="#FFFFFF" />
+                  <rect x="137" y="45" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="159" y="45" width="22" height="22" fill="#FFFFFF" />
+                  <rect x="181" y="45" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="115" y="67" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="137" y="67" width="22" height="22" fill="#FFFFFF" />
+                  <rect x="159" y="67" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="181" y="67" width="22" height="22" fill="#FFFFFF" />
+                  <rect x="115" y="89" width="22" height="22" fill="#FFFFFF" />
+                  <rect x="137" y="89" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="159" y="89" width="22" height="22" fill="#FFFFFF" />
+                  <rect x="181" y="89" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="115" y="111" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="137" y="111" width="22" height="22" fill="#FFFFFF" />
+                  <rect x="159" y="111" width="22" height="22" fill="#E2E8F0" />
+                  <rect x="181" y="111" width="22" height="22" fill="#FFFFFF" />
+                </g>
+                <path d="M 28,38 L 96,38 L 96,56 L 52,56 L 52,74 L 86,74 L 86,91 L 52,91 L 52,110 L 98,110 L 98,128 L 28,128 Z" fill="#1E1671" />
+                <path d="M 94,12 L 172,112 L 160,112 L 136,80 L 66,80 L 22,116 L 18,104 Z M 94,35 L 76,65 L 124,65 Z" fill="#FFF200" stroke="#1E293B" stroke-width="1.2" />
+                <path d="M 150,46 L 166,46 L 198,132 L 176,132 L 170,113 L 144,113 L 137,132 L 116,132 Z M 157,68 L 148,97 L 166,97 Z" fill="#D9251D" />
+              </svg>
+            </div>
+            <div>
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-aeab-green bg-aeab-lime/15 px-2.5 py-1 rounded-full mb-1">
+                Associação dos Engenheiros e Arquitetos de Batatais
+              </span>
+              <h1 class="text-xl sm:text-2xl font-extrabold text-aeab-navy leading-tight">
+                Inscrição Oficial — 1ª Semana da Arquitetura e Engenharia da AEAB
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badges de Data, Local e Gratuidade -->
+        <div class="mt-4 flex flex-wrap items-center gap-2.5 text-xs sm:text-sm font-semibold text-aeab-navy">
+          <span class="inline-flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
+            <svg class="w-4 h-4 text-aeab-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            08, 09 e 12 de dezembro de 2026
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
+            <svg class="w-4 h-4 text-aeab-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Batatais / SP
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-aeab-lime/20 text-aeab-green px-3 py-1.5 rounded-lg border border-aeab-lime/40">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Evento 100% Gratuito
+          </span>
+        </div>
+
+        <p class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
+          Uma programação técnica e institucional voltada para atualização profissional, negócios, preservação do patrimônio e conexões estratégicas entre arquitetos, engenheiros, estudantes e parceiros.
+        </p>
+
+        <!-- Quadro de Regras Importantes -->
+        <div class="mt-5 rounded-xl bg-amber-50/90 border border-amber-200 p-4 sm:p-5 space-y-2.5">
+          <div class="flex items-center gap-2 text-amber-900 font-bold text-sm">
+            <svg class="w-5 h-5 text-amber-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            <span>Informação importante sobre a Visita Técnica:</span>
+          </div>
+          <p class="text-xs sm:text-sm text-amber-950/90 pl-1">
+            <strong>Visita Técnica (Casa de Barro &amp; Complexo dos Padres Claretianos — 12/12):</strong> vagas <strong>extremamente limitadas</strong> para preservação do patrimônio histórico. A confirmação da vaga será enviada pela organização da AEAB por ordem de inscrição e disponibilidade.
+          </p>
+        </div>
+
+        <p class="mt-4 text-xs text-red-600 font-medium">* Indica campo obrigatório</p>
+      </div>
+    </header>
+
+    <!-- FORMULÁRIO INTERATIVO -->
+    <form id="registration-form" novalidate class="space-y-5">
+
+      <!-- 2. DADOS DO PARTICIPANTE -->
+      <section class="form-card p-6 sm:p-8 space-y-6">
+        <div class="border-b border-slate-200 pb-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-aeab-green">Seção 1 de 3</span>
+          <h2 class="text-lg sm:text-xl font-bold text-aeab-navy mt-0.5">Dados do Participante</h2>
+        </div>
+
+        <!-- Nome Completo -->
+        <div>
+          <label for="fullName" class="block text-sm font-semibold text-slate-800 mb-1.5">
+            Nome Completo <span class="text-red-600">*</span>
+          </label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            required
+            placeholder="Digite seu nome completo"
+            class="input-field"
+          />
+          <p id="error-fullName" class="hidden mt-1.5 text-xs text-red-600 font-medium">Por favor, informe seu nome completo.</p>
+        </div>
+
+        <!-- E-mail & WhatsApp -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label for="email" class="block text-sm font-semibold text-slate-800 mb-1.5">
+              E-mail <span class="text-red-600">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="seuemail@exemplo.com"
+              class="input-field"
+            />
+            <p id="error-email" class="hidden mt-1.5 text-xs text-red-600 font-medium">Informe um endereço de e-mail válido.</p>
+          </div>
+
+          <div>
+            <label for="whatsapp" class="block text-sm font-semibold text-slate-800 mb-1.5">
+              WhatsApp (com DDD) <span class="text-red-600">*</span>
+            </label>
+            <input
+              type="tel"
+              id="whatsapp"
+              name="whatsapp"
+              required
+              maxlength="15"
+              placeholder="(16) 99999-9999"
+              class="input-field"
+            />
+            <p class="mt-1 text-xs text-slate-500">Para envio de lembretes e confirmação da vaga.</p>
+            <p id="error-whatsapp" class="hidden mt-1 text-xs text-red-600 font-medium">Informe um número de WhatsApp válido com DDD.</p>
+          </div>
+        </div>
+
+        <!-- Cidade / UF & Registro Profissional -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label for="cityState" class="block text-sm font-semibold text-slate-800 mb-1.5">
+              Cidade / UF <span class="text-red-600">*</span>
+            </label>
+            <input
+              type="text"
+              id="cityState"
+              name="cityState"
+              required
+              placeholder="Ex.: Batatais / SP"
+              class="input-field"
+            />
+            <p id="error-cityState" class="hidden mt-1.5 text-xs text-red-600 font-medium">Informe sua cidade e estado (UF).</p>
+          </div>
+
+          <div>
+            <label for="registry" class="block text-sm font-semibold text-slate-800 mb-1.5">
+              Registro Profissional (CAU ou CREA) <span class="text-xs font-normal text-slate-500">(Opcional)</span>
+            </label>
+            <input
+              type="text"
+              id="registry"
+              name="registry"
+              placeholder="Ex.: CAU A12345-6 ou CREA 5060708090"
+              class="input-field"
+            />
+            <p class="mt-1 text-xs text-slate-500">Importante para emissão de certificado e controle de associados.</p>
+          </div>
+        </div>
+
+        <!-- Área de Atuação / Categoria -->
+        <div>
+          <label class="block text-sm font-semibold text-slate-800 mb-2">
+            Área de Atuação / Categoria <span class="text-red-600">*</span>
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="category-group">
+            <label class="option-card flex items-center gap-3 p-3 text-sm text-slate-700">
+              <input type="radio" name="category" value="Arquiteto(a) e Urbanista" class="w-4 h-4 accent-aeab-green" required />
+              <span>Arquiteto(a) e Urbanista</span>
+            </label>
+            <label class="option-card flex items-center gap-3 p-3 text-sm text-slate-700">
+              <input type="radio" name="category" value="Engenheiro(a) Civil" class="w-4 h-4 accent-aeab-green" />
+              <span>Engenheiro(a) Civil</span>
+            </label>
+            <label class="option-card flex items-center gap-3 p-3 text-sm text-slate-700">
+              <input type="radio" name="category" value="Engenheiro(a) Agrônomo(a)" class="w-4 h-4 accent-aeab-green" />
+              <span>Engenheiro(a) Agrônomo(a)</span>
+            </label>
+            <label class="option-card flex items-center gap-3 p-3 text-sm text-slate-700">
+              <input type="radio" name="category" value="Engenheiro(a) de outras modalidades" class="w-4 h-4 accent-aeab-green" />
+              <span>Engenheiro(a) de outras modalidades</span>
+            </label>
+            <label class="option-card flex items-center gap-3 p-3 text-sm text-slate-700">
+              <input type="radio" name="category" value="Designer de Interiores" class="w-4 h-4 accent-aeab-green" />
+              <span>Designer de Interiores</span>
+            </label>
+            <label class="option-card flex items-center gap-3 p-3 text-sm text-slate-700">
+              <input type="radio" name="category" value="Estudante de Arquitetura ou Engenharia" class="w-4 h-4 accent-aeab-green" />
+              <span>Estudante de Arquitetura ou Engenharia</span>
+            </label>
+            <label class="option-card flex items-center gap-3 p-3 text-sm text-slate-700 sm:col-span-2">
+              <input type="radio" name="category" value="Parceiro / Patrocinador / Outro" class="w-4 h-4 accent-aeab-green" />
+              <span>Parceiro / Patrocinador / Outro</span>
+            </label>
+          </div>
+          <p id="error-category" class="hidden mt-1.5 text-xs text-red-600 font-medium">Selecione sua área de atuação ou categoria.</p>
+        </div>
+
+        <!-- Já é associado(a) à AEAB? -->
+        <div>
+          <label class="block text-sm font-semibold text-slate-800 mb-2">
+            Você já é associado(a) à AEAB? <span class="text-red-600">*</span>
+          </label>
+          <div class="space-y-2.5" id="member-group">
+            <label class="option-card flex items-center gap-3 p-3.5 text-sm text-slate-700">
+              <input type="radio" name="isMember" value="Sim, já sou associado(a)" class="w-4 h-4 accent-aeab-green" required />
+              <span>Sim, já sou associado(a)</span>
+            </label>
+            <label class="option-card flex items-center gap-3 p-3.5 text-sm text-slate-700">
+              <input type="radio" name="isMember" value="Não sou associado(a), mas tenho interesse em conhecer" class="w-4 h-4 accent-aeab-green" />
+              <span>Não sou associado(a), mas tenho interesse em conhecer</span>
+            </label>
+            <label class="option-card flex items-center gap-3 p-3.5 text-sm text-slate-700">
+              <input type="radio" name="isMember" value="Não sou associado(a)" class="w-4 h-4 accent-aeab-green" />
+              <span>Não sou associado(a)</span>
+            </label>
+          </div>
+          <p id="error-isMember" class="hidden mt-1.5 text-xs text-red-600 font-medium">Informe se você já é associado(a) à AEAB.</p>
+        </div>
+      </section>
+
+      <!-- 3. SELEÇÃO DE DIAS E PROGRAMAÇÃO -->
+      <section class="form-card p-6 sm:p-8 space-y-5">
+        <div class="border-b border-slate-200 pb-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-aeab-green">Seção 2 de 3</span>
+          <h2 class="text-lg sm:text-xl font-bold text-aeab-navy mt-0.5">
+            Em quais dias da programação você deseja participar? <span class="text-red-600">*</span>
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">Selecione uma ou mais opções abaixo conforme sua disponibilidade.</p>
+        </div>
+
+        <div class="space-y-3.5" id="days-group">
+          <!-- Dia 08/12 -->
+          <label class="option-card flex items-start gap-3.5 p-4">
+            <input
+              type="checkbox"
+              name="days"
+              id="day-08"
+              value="08/12 (Segunda-feira) — Palestra / Oficina Prática: Inteligência Artificial aplicada a projetos, softwares e gestão (Palestrante: Regiane Arantes)"
+              class="mt-1 w-5 h-5 rounded accent-aeab-green shrink-0"
+            />
+            <div class="space-y-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold uppercase px-2.5 py-0.5 rounded bg-aeab-navy text-white">08/12 • Segunda-feira</span>
+                <span class="text-xs font-semibold text-aeab-green">Palestra / Oficina Prática</span>
+              </div>
+              <p class="text-sm sm:text-base font-bold text-slate-900">
+                Inteligência Artificial aplicada a projetos, softwares e gestão
+              </p>
+              <p class="text-xs sm:text-sm text-slate-600">
+                Palestrante: <strong class="text-slate-800">Regiane Arantes</strong>
+              </p>
+            </div>
+          </label>
+
+          <!-- Dia 09/12 -->
+          <label class="option-card flex items-start gap-3.5 p-4">
+            <input
+              type="checkbox"
+              name="days"
+              id="day-09"
+              value="09/12 (Terça-feira) — Palestras / Painel Executivo: Reforma Tributária, Contratos, Licitações e Posicionamento de Mercado (Palestrantes: Mariana Cintra, Erika Vieira e Lucas Cerne)"
+              class="mt-1 w-5 h-5 rounded accent-aeab-green shrink-0"
+            />
+            <div class="space-y-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold uppercase px-2.5 py-0.5 rounded bg-aeab-navy text-white">09/12 • Terça-feira</span>
+                <span class="text-xs font-semibold text-aeab-green">Palestras / Painel Executivo</span>
+              </div>
+              <p class="text-sm sm:text-base font-bold text-slate-900">
+                Reforma Tributária, Contratos, Licitações e Posicionamento de Mercado
+              </p>
+              <p class="text-xs sm:text-sm text-slate-600">
+                Palestrantes: <strong class="text-slate-800">Mariana Cintra, Erika Vieira e Lucas Cerne</strong>
+              </p>
+            </div>
+          </label>
+
+          <!-- Dia 12/12 — Visita Técnica Casa de Barro -->
+          <label class="option-card flex flex-col sm:flex-row items-start gap-4 p-4">
+            <div class="flex items-start gap-3.5 flex-1">
+              <input
+                type="checkbox"
+                name="days"
+                id="day-12"
+                value="12/12 (Sexta-feira) — Visita Técnica Exclusiva: Casa de Barro & Complexo dos Padres Claretianos — Restauro vernacular e taipa de pilão (Vagas limitadas)"
+                class="mt-1 w-5 h-5 rounded accent-aeab-green shrink-0"
+              />
+              <div class="space-y-1">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="text-xs font-bold uppercase px-2.5 py-0.5 rounded bg-aeab-navy text-white">12/12 • Sexta-feira</span>
+                  <span class="text-xs font-bold text-red-700 bg-red-100 px-2 py-0.5 rounded">Vagas Limitadas</span>
+                </div>
+                <p class="text-sm sm:text-base font-bold text-slate-900">
+                  Visita Técnica Exclusiva: Casa de Barro &amp; Complexo dos Padres Claretianos
+                </p>
+                <p class="text-xs sm:text-sm text-slate-600">
+                  Restauro vernacular e taipa de pilão • Vagas sujeitas à confirmação da organização.
+                </p>
+              </div>
+            </div>
+            <!-- Card Visual Ilustrado da Casa de Barro -->
+            <div class="w-full sm:w-40 h-24 rounded-lg overflow-hidden border border-slate-200 shrink-0 shadow-sm relative group bg-slate-100">
+              <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" role="img" aria-label="Casa de Barro e Complexo dos Padres Claretianos">
+                <rect width="320" height="200" fill="#BBD2E4" />
+                <polygon points="245,10 232,95 258,95" fill="#23471E" />
+                <polygon points="285,20 272,105 298,105" fill="#23471E" />
+                <circle cx="95" cy="78" r="34" fill="#2D5A27" />
+                <rect x="0" y="92" width="165" height="68" fill="#C2512E" />
+                <path d="M 15,92 A 28,17 0 0,1 71,92 Z" fill="#FFFFFF" />
+                <path d="M 22,92 A 21,12 0 0,1 64,92 Z" fill="#1E40AF" />
+                <path d="M 85,92 A 28,17 0 0,1 141,92 Z" fill="#FFFFFF" />
+                <path d="M 92,92 A 21,12 0 0,1 134,92 Z" fill="#1E40AF" />
+                <rect x="0" y="156" width="320" height="44" fill="#376E23" />
+                <polygon points="90,156 125,156 60,200 18,200" fill="#C48B62" />
+                <ellipse cx="155" cy="160" rx="28" ry="8" fill="#263829" stroke="#8C583A" stroke-width="2" />
+                <!-- Abóbada Branca -->
+                <path d="M 158,158 C 180,108 195,62 225,58 L 285,54 C 262,62 248,112 235,160 Z" fill="#FFFFFF" />
+                <path d="M 285,54 C 296,80 300,122 298,158 L 235,160 C 248,112 262,62 285,54 Z" fill="#7C2D12" />
+              </svg>
+              <span class="absolute bottom-1 right-1 bg-aeab-navy/85 text-white text-[10px] font-semibold px-1.5 py-0.5 rounded">
+                Patrimônio Histórico
+              </span>
+            </div>
+          </label>
+        </div>
+
+        <p id="error-days" class="hidden text-xs text-red-600 font-medium">Selecione pelo menos um dia ou atividade da programação.</p>
+      </section>
+
+      <!-- 4. TERMOS E CONFIRMAÇÕES OBRIGATÓRIAS -->
+      <section class="form-card p-6 sm:p-8 space-y-4">
+        <div class="border-b border-slate-200 pb-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-aeab-green">Seção 3 de 3</span>
+          <h2 class="text-lg sm:text-xl font-bold text-aeab-navy mt-0.5">Termos e Confirmações Obrigatórias</h2>
+        </div>
+
+        <!-- Termo 1: Casa de Barro -->
+        <label class="option-card flex items-start gap-3.5 p-4">
+          <input
+            type="checkbox"
+            id="termCasaBarro"
+            name="termCasaBarro"
+            required
+            class="mt-0.5 w-5 h-5 rounded accent-aeab-green shrink-0"
+          />
+          <span class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            <strong class="text-slate-900">Ciência sobre a Visita Técnica (Casa de Barro — 12/12):</strong> Estou ciente de que a visita técnica à <strong>Casa de Barro</strong> possui <strong>número limitado de participantes</strong> por questões de preservação do espaço histórico e que a efetivação da minha vaga dependerá de confirmação prévia da organização da AEAB. <span class="text-red-600 font-bold">*</span>
+          </span>
+        </label>
+        <p id="error-termCasaBarro" class="hidden text-xs text-red-600 font-medium pl-1">Você precisa confirmar ciência sobre o limite de vagas da Visita Técnica à Casa de Barro.</p>
+
+        <!-- Termo 2: LGPD -->
+        <label class="option-card flex items-start gap-3.5 p-4">
+          <input
+            type="checkbox"
+            id="termLgpd"
+            name="termLgpd"
+            required
+            class="mt-0.5 w-5 h-5 rounded accent-aeab-green shrink-0"
+          />
+          <span class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            <strong class="text-slate-900">Autorização de Contato e Uso de Imagem (LGPD):</strong> Autorizo o contato da AEAB via WhatsApp e e-mail para comunicações oficiais sobre o evento e concordo com o registro fotográfico institucional durante as atividades. <span class="text-red-600 font-bold">*</span>
+          </span>
+        </label>
+        <p id="error-termLgpd" class="hidden text-xs text-red-600 font-medium pl-1">É necessário concordar com a autorização de contato e uso de imagem (LGPD).</p>
+      </section>
+
+      <!-- 5. BOTÕES DE ENVIO -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-1 pb-8 no-print">
+        <button
+          type="submit"
+          class="w-full sm:w-auto flex-1 bg-aeab-navy hover:bg-aeab-navyLight text-white font-bold text-base py-4 px-8 rounded-xl shadow-lg shadow-aeab-navy/20 transition-all duration-200 flex items-center justify-center gap-2.5 cursor-pointer"
+        >
+          <span>Confirmar Inscrição na 1ª SAE</span>
+          <svg class="w-5 h-5 text-aeab-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+        </button>
+
+        <button
+          type="button"
+          id="clear-form-btn"
+          class="w-full sm:w-auto text-sm font-semibold text-slate-600 hover:text-aeab-navy py-3.5 px-5 rounded-xl hover:bg-slate-200/70 transition-colors cursor-pointer"
+        >
+          Limpar formulário
+        </button>
+      </div>
+    </form>
+
+    <!-- TELA DE CONFIRMAÇÃO E COMPROVANTE (Exibida após envio válido) -->
+    <section id="confirmation-screen" class="hidden form-card p-6 sm:p-8 border-t-8 border-t-aeab-lime space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-5">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-full bg-aeab-lime/20 text-aeab-green flex items-center justify-center shrink-0">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-aeab-green">Comprovante de Pré-Inscrição</span>
+            <h2 class="text-xl sm:text-2xl font-extrabold text-aeab-navy">Inscrição realizada com sucesso!</h2>
+          </div>
+        </div>
+        <div class="text-left sm:text-right">
+          <span class="text-xs text-slate-500 block">Protocolo</span>
+          <span id="receipt-protocol" class="font-mono text-sm font-bold text-aeab-navy bg-slate-100 px-3 py-1 rounded-lg border border-slate-200 inline-block mt-0.5">#AEAB-2026-0000</span>
+        </div>
+      </div>
+
+      <!-- Resumo Completo dos Dados -->
+      <div class="bg-slate-50 rounded-xl border border-slate-200 p-5 space-y-4">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-aeab-navy">Resumo dos Dados Cadastrados</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-sm">
+          <div>
+            <span class="text-xs text-slate-500 block">Participante</span>
+            <strong id="summary-name" class="text-slate-900"></strong>
+          </div>
+          <div>
+            <span class="text-xs text-slate-500 block">E-mail</span>
+            <strong id="summary-email" class="text-slate-900"></strong>
+          </div>
+          <div>
+            <span class="text-xs text-slate-500 block">WhatsApp</span>
+            <strong id="summary-whatsapp" class="text-slate-900"></strong>
+          </div>
+          <div>
+            <span class="text-xs text-slate-500 block">Cidade / UF</span>
+            <strong id="summary-city" class="text-slate-900"></strong>
+          </div>
+          <div>
+            <span class="text-xs text-slate-500 block">Área de Atuação</span>
+            <strong id="summary-category" class="text-slate-900"></strong>
+          </div>
+          <div>
+            <span class="text-xs text-slate-500 block">Registro Profissional</span>
+            <strong id="summary-registry" class="text-slate-900"></strong>
+          </div>
+          <div class="sm:col-span-2">
+            <span class="text-xs text-slate-500 block">Vínculo com a AEAB</span>
+            <strong id="summary-member" class="text-slate-900"></strong>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-slate-200">
+          <span class="text-xs font-bold uppercase tracking-wider text-aeab-navy block mb-2">Dias e Atividades Selecionados</span>
+          <ul id="summary-days" class="space-y-2 text-sm text-slate-800"></ul>
+        </div>
+      </div>
+
+      <!-- Lembretes Pós-Inscrição -->
+      <div class="rounded-xl bg-aeab-navy text-white p-5 space-y-2.5 text-xs sm:text-sm">
+        <p class="font-bold text-aeab-lime text-sm sm:text-base">Próximos passos importantes:</p>
+        <p>• <strong>Lista de Presença e Certificado:</strong> Assine a lista de presença nos dias de palestra (08/12 e/ou 09/12) para validar sua participação e garantir seu certificado.</p>
+        <p id="summary-casa-barro-note" class="hidden">• <strong>Visita Técnica à Casa de Barro (12/12):</strong> Como as vagas são limitadas para preservação do patrimônio, nossa equipe enviará a confirmação individual pelo seu WhatsApp.</p>
+        <p class="pt-1 text-slate-300">Acompanhe todas as novidades no Instagram oficial: <strong class="text-white">@aeabatatais</strong></p>
+      </div>
+
+      <!-- Botões de Ação do Comprovante -->
+      <div class="flex flex-col sm:flex-row items-center gap-3 pt-2 no-print">
+        <button
+          type="button"
+          id="copy-receipt-btn"
+          class="w-full sm:w-auto flex-1 bg-aeab-green hover:bg-aeab-lime text-white font-bold text-sm py-3.5 px-5 rounded-xl transition-colors flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+          <span>Copiar Comprovante</span>
+        </button>
+
+        <button
+          type="button"
+          id="print-receipt-btn"
+          class="w-full sm:w-auto flex-1 bg-aeab-navy hover:bg-aeab-navyLight text-white font-bold text-sm py-3.5 px-5 rounded-xl transition-colors flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          <span>Baixar / Imprimir PDF</span>
+        </button>
+
+        <button
+          type="button"
+          id="new-registration-btn"
+          class="w-full sm:w-auto text-sm font-semibold text-slate-600 hover:text-aeab-navy py-3.5 px-4 rounded-xl border border-slate-300 hover:bg-slate-100 transition-colors cursor-pointer"
+        >
+          Nova inscrição
+        </button>
+      </div>
+    </section>
+
+    <!-- Rodapé Institucional -->
+    <footer class="text-center text-xs text-slate-500 pb-6 space-y-1 no-print">
+      <p class="font-semibold text-aeab-navy">AEAB — Associação dos Engenheiros e Arquitetos de Batatais</p>
+      <p>1ª Semana da Arquitetura e Engenharia • 08, 09 e 12 de Dezembro de 2026 • Batatais/SP</p>
+    </footer>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('registration-form');
+      const confirmationScreen = document.getElementById('confirmation-screen');
+      const whatsappInput = document.getElementById('whatsapp');
+      const day12 = document.getElementById('day-12');
+
+      let lastReceiptText = '';
+
+      // Sistema de Notificação Toast (substitui alert)
+      function showToast(message, type = 'info') {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        const bgClass = type === 'error' ? 'bg-red-700' : type === 'success' ? 'bg-aeab-green' : 'bg-aeab-navy';
+        toast.className = `${bgClass} text-white text-xs sm:text-sm font-medium px-4 py-3 rounded-xl shadow-lg pointer-events-auto transition-all duration-300 flex items-center justify-between gap-3`;
+        toast.innerHTML = `<span>${message}</span>`;
+        container.appendChild(toast);
+
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          setTimeout(() => toast.remove(), 300);
+        }, 4000);
+      }
+
+      // Máscara automática para WhatsApp com DDD: (16) 99999-9999
+      whatsappInput.addEventListener('input', (e) => {
+        let digits = e.target.value.replace(/\D/g, '').slice(0, 11);
+        if (digits.length > 6) {
+          e.target.value = `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+        } else if (digits.length > 2) {
+          e.target.value = `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+        } else if (digits.length > 0) {
+          e.target.value = `(${digits}`;
+        } else {
+          e.target.value = '';
+        }
+      });
+
+      // Atualização visual dos cards selecionados (Radio e Checkbox)
+      function syncOptionCards() {
+        document.querySelectorAll('.option-card').forEach((card) => {
+          const input = card.querySelector('input');
+          if (input && input.checked) {
+            card.classList.add('selected');
+          } else {
+            card.classList.remove('selected');
+          }
+        });
+      }
+
+      form.addEventListener('change', () => {
+        syncOptionCards();
+      });
+
+      // Validação completa do formulário
+      function validateForm() {
+        let isValid = true;
+        let firstInvalidEl = null;
+
+        const setFieldError = (inputId, errorId, condition) => {
+          const inputEl = document.getElementById(inputId);
+          const errorEl = document.getElementById(errorId);
+          if (!condition) {
+            if (inputEl) inputEl.classList.add('input-error');
+            if (errorEl) errorEl.classList.remove('hidden');
+            isValid = false;
+            if (!firstInvalidEl) firstInvalidEl = inputEl || errorEl;
+          } else {
+            if (inputEl) inputEl.classList.remove('input-error');
+            if (errorEl) errorEl.classList.add('hidden');
+          }
+        };
+
+        // 1. Nome completo
+        const fullName = document.getElementById('fullName').value.trim();
+        setFieldError('fullName', 'error-fullName', fullName.length >= 3);
+
+        // 2. E-mail
+        const email = document.getElementById('email').value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        setFieldError('email', 'error-email', emailRegex.test(email));
+
+        // 3. WhatsApp
+        const whatsappDigits = whatsappInput.value.replace(/\D/g, '');
+        setFieldError('whatsapp', 'error-whatsapp', whatsappDigits.length >= 10);
+
+        // 4. Cidade / UF
+        const cityState = document.getElementById('cityState').value.trim();
+        setFieldError('cityState', 'error-cityState', cityState.length >= 2);
+
+        // 5. Categoria
+        const selectedCategory = form.querySelector('input[name="category"]:checked');
+        setFieldError(null, 'error-category', Boolean(selectedCategory));
+        if (!selectedCategory && !firstInvalidEl) {
+          firstInvalidEl = document.getElementById('category-group');
+        }
+
+        // 6. Associado AEAB
+        const selectedMember = form.querySelector('input[name="isMember"]:checked');
+        setFieldError(null, 'error-isMember', Boolean(selectedMember));
+        if (!selectedMember && !firstInvalidEl) {
+          firstInvalidEl = document.getElementById('member-group');
+        }
+
+        // 7. Dias selecionados
+        const selectedDays = Array.from(form.querySelectorAll('input[name="days"]:checked'));
+        setFieldError(null, 'error-days', selectedDays.length > 0);
+        if (selectedDays.length === 0 && !firstInvalidEl) {
+          firstInvalidEl = document.getElementById('days-group');
+        }
+
+        // 8. Termos obrigatórios
+        const termCasaBarro = document.getElementById('termCasaBarro').checked;
+        setFieldError(null, 'error-termCasaBarro', termCasaBarro);
+
+        const termLgpd = document.getElementById('termLgpd').checked;
+        setFieldError(null, 'error-termLgpd', termLgpd);
+
+        if (!isValid && firstInvalidEl) {
+          firstInvalidEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          showToast('Por favor, preencha todos os campos obrigatórios destacados.', 'error');
+        }
+
+        return isValid;
+      }
+
+      // Envio do formulário
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (!validateForm()) return;
+
+        const fullName = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const whatsapp = whatsappInput.value.trim();
+        const cityState = document.getElementById('cityState').value.trim();
+        const registry = document.getElementById('registry').value.trim() || 'Não informado';
+        const category = form.querySelector('input[name="category"]:checked').value;
+        const isMember = form.querySelector('input[name="isMember"]:checked').value;
+        const selectedDays = Array.from(form.querySelectorAll('input[name="days"]:checked')).map((el) => el.value);
+
+        // Gera protocolo único
+        const randomCode = Math.floor(1000 + Math.random() * 9000);
+        const protocol = `#AEAB-2026-${randomCode}`;
+
+        // Preenche comprovante na tela
+        document.getElementById('receipt-protocol').textContent = protocol;
+        document.getElementById('summary-name').textContent = fullName;
+        document.getElementById('summary-email').textContent = email;
+        document.getElementById('summary-whatsapp').textContent = whatsapp;
+        document.getElementById('summary-city').textContent = cityState;
+        document.getElementById('summary-category').textContent = category;
+        document.getElementById('summary-registry').textContent = registry;
+        document.getElementById('summary-member').textContent = isMember;
+
+        const summaryDaysList = document.getElementById('summary-days');
+        summaryDaysList.innerHTML = '';
+        selectedDays.forEach((dayText) => {
+          const li = document.createElement('li');
+          li.className = 'flex items-start gap-2 bg-white p-2.5 rounded-lg border border-slate-200';
+          li.innerHTML = `<span class="text-aeab-green font-bold">✓</span><span>${dayText}</span>`;
+          summaryDaysList.appendChild(li);
+        });
+
+        // Destaca aviso da Casa de Barro caso tenha sido selecionada
+        const casaBarroNote = document.getElementById('summary-casa-barro-note');
+        if (day12.checked) {
+          casaBarroNote.classList.remove('hidden');
+        } else {
+          casaBarroNote.classList.add('hidden');
+        }
+
+        // Monta texto plano para cópia
+        lastReceiptText = [
+          `COMPROVANTE DE INSCRIÇÃO — 1ª SEMANA DA ARQUITETURA E ENGENHARIA DA AEAB`,
+          `Protocolo: ${protocol}`,
+          `Datas: 08, 09 e 12 de dezembro de 2026 | Batatais/SP`,
+          `--------------------------------------------------`,
+          `Participante: ${fullName}`,
+          `E-mail: ${email}`,
+          `WhatsApp: ${whatsapp}`,
+          `Cidade/UF: ${cityState}`,
+          `Categoria: ${category}`,
+          `Registro (CAU/CREA): ${registry}`,
+          `Associado AEAB: ${isMember}`,
+          `--------------------------------------------------`,
+          `DIAS E ATIVIDADES SELECIONADOS:`,
+          ...selectedDays.map((d) => `• ${d}`),
+          `--------------------------------------------------`,
+          `Lembretes:`,
+          `- Assine a lista de presença nas palestras para emissão do certificado.`,
+          `- Visita Técnica à Casa de Barro (12/12) sujeita à confirmação de vaga pela AEAB.`
+        ].join('\n');
+
+        // Alterna visualização para a tela de confirmação
+        form.classList.add('hidden');
+        confirmationScreen.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        showToast('Inscrição confirmada com sucesso!', 'success');
+      });
+
+      // Copiar comprovante usando execCommand (compatível com iFrame)
+      document.getElementById('copy-receipt-btn').addEventListener('click', () => {
+        const tempTextarea = document.createElement('textarea');
+        tempTextarea.value = lastReceiptText;
+        tempTextarea.style.position = 'fixed';
+        tempTextarea.style.opacity = '0';
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        try {
+          document.execCommand('copy');
+          showToast('Comprovante copiado para a área de transferência!', 'success');
+        } catch (err) {
+          showToast('Não foi possível copiar automaticamente. Use o botão Imprimir/PDF.', 'error');
+        }
+        document.body.removeChild(tempTextarea);
+      });
+
+      // Imprimir / Salvar PDF
+      document.getElementById('print-receipt-btn').addEventListener('click', () => {
+        window.print();
+      });
+
+      // Limpar formulário
+      document.getElementById('clear-form-btn').addEventListener('click', () => {
+        form.reset();
+        document.querySelectorAll('.input-error').forEach((el) => el.classList.remove('input-error'));
+        document.querySelectorAll('[id^="error-"]').forEach((el) => el.classList.add('hidden'));
+        syncOptionCards();
+        showToast('Formulário limpo.', 'info');
+      });
+
+      // Nova inscrição
+      document.getElementById('new-registration-btn').addEventListener('click', () => {
+        form.reset();
+        syncOptionCards();
+        confirmationScreen.classList.add('hidden');
+        form.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
